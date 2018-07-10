@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NotificationService } from './services/notification.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Hola mundo';
+
+  constructor(private notify: NotificationService) {
+    // this.notify.add('Esto es una demos');
+    // this.notify.remove(69);
+  }
 }
