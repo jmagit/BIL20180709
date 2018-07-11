@@ -21,6 +21,8 @@ export class DemosComponent implements OnInit {
   visible: boolean = true;
   estilos = { importante: true, error: false, remarcar: true };
 
+  fuente = 14;
+
   constructor(public srv: NotificationService) { }
 
   ngOnInit() {

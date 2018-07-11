@@ -1,0 +1,14 @@
+.importante {
+  color: rgb(72, 22, 255);
+}
+
+.error {
+  color: red;
+}
+
+.remarcar {
+  font-style: italic;
+}
+.visible {
+  font-size: 2em;
+}
