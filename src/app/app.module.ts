@@ -4,10 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { MyCoreModule, LoggerService, ERROR_LEBEL } from '../my-core';
 import { ComunesModule } from './comunes/comunes.module';
+import { HomeComponent } from './home/home.component';
+import { DemosComponent } from './demos/demos.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    DemosComponent
   ],
   imports: [
     BrowserModule, FormsModule,
