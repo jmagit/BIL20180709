@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  errorLevel: 1,
+  urlWS: '/api/',
 };

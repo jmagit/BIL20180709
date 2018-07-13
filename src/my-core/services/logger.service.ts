@@ -1,12 +1,12 @@
 import { Injectable, InjectionToken, Inject, Optional } from '@angular/core';
 
-export const ERROR_LEBEL = new InjectionToken<number>('ERROR_LEBEL');
+export const ERROR_LEVEL = new InjectionToken<number>('ERROR_LEBEL');
 
 @Injectable()
 export class LoggerService {
   private lebel: number = 5;
 
-  constructor(@Optional() @Inject(ERROR_LEBEL) lebel: number) {
+  constructor(@Optional() @Inject(ERROR_LEVEL) lebel: number) {
     if (lebel != null) {
       this.lebel = lebel;
     }
