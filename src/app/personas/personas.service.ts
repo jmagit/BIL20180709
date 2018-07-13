@@ -4,6 +4,7 @@ import { NotificationService } from '../services/notification.service';
 import { environment } from '../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Router } from '../../../node_modules/@angular/router';
 
 
 @Injectable({
@@ -37,9 +38,10 @@ export class PersonasDAOViewModelService {
   protected elemento: any = {};
   protected idOriginal: any = null;
   protected pk = 'id';
+  protected urlList = '/personas';
 
   constructor(protected out: LoggerService, protected notify: NotificationService,
-    private dao: PersonasDAOService) { }
+    private dao: PersonasDAOService, private router: Router) { }
 
   public get Modo() { return this.modo; }
   public get Listado() { return this.listado; }
@@ -92,7 +94,8 @@ export class PersonasDAOViewModelService {
   public cancel() {
     this.elemento = {};
     this.idOriginal = null;
-    this.list();
+    //this.list();
+    this.router.navigateByUrl(this.urlList);
   }
   public send() {
     switch (this.modo) {
